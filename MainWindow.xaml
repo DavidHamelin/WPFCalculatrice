@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Calculatrice" Height="400" Width="300" Background="#FF707070">
     <Grid>
-
+        <!-- Ecran -->
         <TextBox x:Name="Output" Height="90" TextWrapping="Wrap" Text="" Background="#FFE1D0E4" TextAlignment="Right" FontSize="48" AcceptsReturn="True" VerticalAlignment="Top" Padding="0,0,5,0" FontWeight="Bold" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Margin="-1,0" VerticalContentAlignment="Bottom" IsReadOnly="True"/>
+        <!-- Touches -->
         <Grid Margin="4,94,4,4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

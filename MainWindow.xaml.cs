@@ -23,7 +23,7 @@ namespace TP_Calculator
         long numberOne = 0;
         long numberTwo = 0;
         string operation = "";
-        bool total = false;
+        //bool total = false;
 
         public MainWindow()
         {
@@ -32,10 +32,10 @@ namespace TP_Calculator
 
         private void Zero_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -51,10 +51,10 @@ namespace TP_Calculator
 
         private void One_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -70,10 +70,10 @@ namespace TP_Calculator
 
         private void Two_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -89,10 +89,10 @@ namespace TP_Calculator
 
         private void Three_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -108,10 +108,10 @@ namespace TP_Calculator
 
         private void Four_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -127,10 +127,10 @@ namespace TP_Calculator
 
         private void Five_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -146,10 +146,10 @@ namespace TP_Calculator
 
         private void Six_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -165,10 +165,10 @@ namespace TP_Calculator
 
         private void Seven_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -184,10 +184,10 @@ namespace TP_Calculator
 
         private void Eight_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -203,10 +203,10 @@ namespace TP_Calculator
 
         private void Nine_Click(object sender, RoutedEventArgs e)
         {
-            if (total == true)
-            {
-                Reset();
-            }
+            //if (total == true)
+            //{
+            //    Reset();
+            //}
 
             if (operation == "")
             {
@@ -225,7 +225,7 @@ namespace TP_Calculator
             numberOne = 0;
             numberTwo = 0;
             operation = "";
-            total = false;
+            //total = false;
             Output.Text = "0";
         }
 
@@ -264,18 +264,127 @@ namespace TP_Calculator
             {
                 case "+":
                     Output.Text = (numberOne + numberTwo).ToString();
+                    numberOne = (numberOne + numberTwo);
+                    numberTwo = 0;
                     break;
                 case "-":
                     Output.Text = (numberOne - numberTwo).ToString();
+                    numberOne = (numberOne - numberTwo);
+                    numberTwo = 0;
                     break;
                 case "*":
                     Output.Text = (numberOne * numberTwo).ToString();
+                    numberOne = (numberOne * numberTwo);
+                    numberTwo = 0;
                     break;
                 case "/":
                     Output.Text = (numberOne / numberTwo).ToString();
+                    numberOne = (numberOne / numberTwo);
+                    numberTwo = 0;
                     break;
             }
-            total = true;
+            //total = true;
         }
+
+        //// CORRECTION : UNE méthode pour TOUTES les touches
+        //long number1 = 0;
+        //long number2 = 0;
+        //// Presence ou non d'un opérateur
+        //string operation = "";
+        //public MainWindow()
+        //{
+        //    InitializeComponent();
+        //}
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //// Chiffre
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //private void ButtonClick(object sender, RoutedEventArgs e)
+        //{
+        //    // On récupére le parametre sender du bouton.
+        //    var userNumber = sender as Button;
+        //    if (Result.Text == "0")
+        //    {
+        //        // On renvoi la valeur du bouton
+        //        Result.Text = userNumber.Content.ToString();
+        //    }
+        //    else
+        //    {
+        //        Result.Text += userNumber.Content.ToString();
+        //    }
+        //}
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //// Operations
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //private void ButtonClickAdd(object sender, RoutedEventArgs e)
+        //{
+        //    number1 = long.Parse(Result.Text);
+        //    operation = "+";
+        //    Result.Text = "0";
+        //}
+        //private void ButtonClickMinus(object sender, RoutedEventArgs e)
+        //{
+        //    number1 = long.Parse(Result.Text);
+        //    operation = "-";
+        //    Result.Text = "0";
+        //}
+        //private void ButtonClickMultiply(object sender, RoutedEventArgs e)
+        //{
+        //    number1 = long.Parse(Result.Text);
+        //    operation = "*";
+        //    Result.Text = "0";
+        //}
+        //private void ButtonClickDivide(object sender, RoutedEventArgs e)
+        //{
+        //    number1 = long.Parse(Result.Text);
+        //    operation = "/";
+        //    Result.Text = "0";
+        //}
+        //private void ButtonClickEqual(object sender, RoutedEventArgs e)
+        //{
+        //    number2 = long.Parse(Result.Text);
+        //    // Case pour chaque operation basé sur le signe stocké dans OPERATION
+        //    switch (operation)
+        //    {
+        //        case "+":
+        //            Result.Text = (number1 + number2).ToString();
+        //            // On stock le resultat dans Number1 pour pouvoir le réutiliser 
+        //            number1 = (number1 + number2);
+        //            //Reset Number2
+        //            number2 = 0;
+        //            break;
+        //        case "-":
+        //            Result.Text = (number1 - number2).ToString();
+        //            number1 = (number1 - number2);
+        //            number2 = 0;
+        //            break;
+        //        case "/":
+        //            if (number2 == 0)
+        //            {
+        //                MessageBox.Show("Erreur", "Erreur");
+        //            }
+        //            else
+        //            {
+        //                Result.Text = (number1 / number2).ToString();
+        //                number1 = (number1 / number2);
+        //                number2 = 0;
+
+        //            }
+        //            break;
+
+        //        case "*":
+        //            Result.Text = (number1 * number2).ToString();
+        //            number1 = (number1 * number2);
+        //            number2 = 0;
+        //            break;
+        //    }
+        //}
+        //// RESET
+        //private void ButtonClickReset(object sender, RoutedEventArgs e)
+        //{
+        //    number1 = 0;
+        //    number2 = 0;
+        //    operation = "";
+        //    Result.Text = "0";
+        //}
     }
 }
